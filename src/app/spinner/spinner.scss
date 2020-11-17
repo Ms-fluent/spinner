@@ -1,0 +1,20 @@
+.ms-spinner-inlineDot {
+  display: block;
+  border: 1px solid red;
+}
+
+.ms-spinner-container {
+  border: 1px solid blue;
+}
+
+.ms-spinner-dot {
+  display: inline-block;
+  border-radius: 50%;
+  animation: inline-spin 1s linear infinite;
+}
+
+
+@keyframes inline-spin {
+  from {transform: translate(0, 0)}
+  to {transform: translate(0, 1000)}
+}
