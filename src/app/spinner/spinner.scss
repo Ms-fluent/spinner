@@ -13,6 +13,9 @@
   animation: inline-spin 1s linear infinite;
 }
 
+.transition {
+  transition: width ease-in-out 32s;
+}
 
 @keyframes inline-spin {
   from {transform: translate(0, 0)}

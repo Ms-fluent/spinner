@@ -38,7 +38,7 @@ export class MsSpinnerInlineDot implements OnInit, AfterViewInit {
   gap: number = 1;
 
   @Input()
-  duration: number = 800;
+  duration: number = 2500;
 
   @ViewChild('container')
   container: ElementRef<SVGElement>;
@@ -70,7 +70,7 @@ export class MsSpinnerInlineDot implements OnInit, AfterViewInit {
   async animates() {
     for (let i = 0; i < 10; i++) {
       await this.beforeAnimate();
-      await this.afterAnimate();
+      // await this.afterAnimate();
       await wait(200);
     }
   }
@@ -86,7 +86,8 @@ export class MsSpinnerInlineDot implements OnInit, AfterViewInit {
   }
 
   async beforeAnimateDot(dot: MsSpinnerDot, index: number): Promise<void> {
-    const to = -(this.diameter * index + this.gap * index) + this.getWidth() / 2;
+    // const to = -(this.diameter * index + this.gap * index) + this.getWidth() / 2;
+    const to = this.getWidth() + 10;
     await dot.animateX(0, to, this.duration);
   }
 

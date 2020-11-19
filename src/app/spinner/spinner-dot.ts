@@ -21,7 +21,7 @@ export class MsSpinnerDot {
       this._element.animate([
         {'cx': `${from}`},
         {'cx': `${to}`}
-      ], {duration, fill: 'both', easing: 'ease-in-out'})
+      ], {duration, fill: 'both', easing: 'cubic-bezier(0, 0.75, 1, 0.25)'})
         .onfinish = () => {
         resolve();
         this.x = to;
